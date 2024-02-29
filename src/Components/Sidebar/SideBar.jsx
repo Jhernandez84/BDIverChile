@@ -22,12 +22,12 @@ const SideBarComponent = () => {
   const SideBarMenu = [
     { SBIcon: HiIcons.HiChartPie, SBMenu: "Dashboard", SBRout: "/dashboard" },
     { SBIcon: HiIcons.HiHome, SBMenu: "Home", SBRout: "/home" },
-    { SBIcon: HiIcons.HiOutlineMail, SBMenu: "Inbox", SBRout: "/" },
-    { SBIcon: HiIcons.HiUsers, SBMenu: "Personal", SBRout: "/" },
-    { SBIcon: HiIcons.HiCalendar, SBMenu: "Calendar", SBRout: "/calendar" },
-    { SBIcon: HiIcons.HiAdjustments, SBMenu: "Settings", SBRout: "/usersettings" },
-    { SBIcon: HiIcons.HiUserGroup, SBMenu: "Usuarios/Clientes", SBRout: "/" },
-    { SBIcon: HiIcons.HiLogout, SBMenu: "LogOut", SBRout: "/" },
+    { SBIcon: HiIcons.HiUserGroup, SBMenu: "Redes", SBRout: "/redes" },
+    { SBIcon: HiIcons.HiOutlineAnnotation, SBMenu: "Eventos", SBRout: "/" },
+    { SBIcon: HiIcons.HiCalendar, SBMenu: "Calendario", SBRout: "/calendar" },
+    { SBIcon: HiIcons.HiAdjustments, SBMenu: "Ajustes", SBRout: "/usersettings" },
+    { SBIcon: HiIcons.HiUsers, SBMenu: "Usuarios", SBRout: "/" },
+    // { SBIcon: HiIcons.HiLogout, SBMenu: "LogOut", SBRout: "/" },
     { SBIcon: HiIcons.HiSupport, SBMenu: "Ayuda", SBRout: "/" },
   ];
 
