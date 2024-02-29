@@ -41,9 +41,13 @@ export default function RootLayout({ children }) {
               <NavBar />
             </div>
             <div>
-              <div className="flex columns-2">
-                <div className="" ><SideBarComponent /> </div>
-                <div className="h-[95vh] w-[100%]">{children}</div>
+              <div className="absolute columns-2">
+                {/* <div className="" ><SideBarComponent /> </div> */}
+
+                <div className="w-[100%]">
+                  <SideBarComponent />
+                {children}
+                </div>
               </div>
             </div>
           </main>
