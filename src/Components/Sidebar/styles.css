@@ -1,0 +1,53 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  /* grid-template-columns: 10px,90px; */
+}
+
+.content-container {
+  margin-left: 70px;
+  position: absolute;
+  
+}
+
+.side-bar{
+  height: 100vh;
+  z-index: 2;
+}
+
+.collapsed-sidebar {
+  width: 70px;
+  overflow: hidden;
+  transition: width 0.3s ease; /* Add smooth transition */
+}
+
+.expanded-sidebar {
+  width: 200px; /* Set your desired expanded width */
+  overflow: visible;
+  transition: width 0.3s ease; /* Add smooth transition */
+  z-index: 2;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #f7f7f7;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

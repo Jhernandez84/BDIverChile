@@ -7,6 +7,7 @@ import NavBar from "@/Components/NavBar/NavBar";
 import { ThemeModeScript } from "flowbite-react";
 import FooterPage from "@/Components/Footer/Footer";
 import SideBarComponent from "@/Components/Sidebar/SideBar";
+import '../Components/Sidebar/styles.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
   }
 
   const User = { userName: "Jonathan", userProfile: "Admin" };
+  const [isSidebarCollapsed, setSidebarCollapsed] = useState(true);
 
   return (
     <html>
@@ -41,13 +43,8 @@ export default function RootLayout({ children }) {
               <NavBar />
             </div>
             <div>
-              <div className="absolute columns-2">
-                {/* <div className="" ><SideBarComponent /> </div> */}
-
-                <div className="w-[100%]">
-                  <SideBarComponent />
-                {children}
-                </div>
+              <div className="h-[full]">
+                  <SideBarComponent children={children}/>
               </div>
             </div>
           </main>
