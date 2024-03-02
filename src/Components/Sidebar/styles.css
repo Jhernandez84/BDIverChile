@@ -32,6 +32,12 @@
   align-items: center;
 }
 
+.sidebar-link-main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .collapsed-sidebar .sidebar-content-text {
   visibility: hidden;
   transition: visibility 0.1s ease; /* Optional: Add a smooth transition effect */
@@ -82,10 +88,18 @@
   bottom: -5px;
   width: 0; /* Initial width is 0 */
   height: 2px; /* Adjust the thickness of the line as needed */
-  background-color:#0d9488; /* or any other color you want */
+  background-color: #0d9488; /* or any other color you want */
   transition: width 0.25s ease-out; /* Transition the width property */
 }
 
 .sidebar-content-text:hover::before {
   width: 80%; /* Appear from left to right on hover */
+}
+
+.sidebar-link-content:hover .sidebar-submenu {
+  display: list-item;
+}
+
+.sidebar-submenu {
+  display: none;
 }

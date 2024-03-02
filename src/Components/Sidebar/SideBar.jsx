@@ -11,6 +11,8 @@ import {
   HiUser,
   HiUsers,
   HiQuestionMarkCircle,
+  HiDatabase,
+  HiViewList,
 } from "react-icons/hi";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 
@@ -43,19 +45,21 @@ const SideBarComponent = ({ children }) => {
       SBRout: "/dashboard",
     },
     {
-      SBIcon: <HiHome style={{ fontSize: iconSize }} />,
-      SBMenu: "Home",
+      SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
+      SBMenu: "Iglesia",
       SBRout: "/home",
-    },
-    {
-      SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
-      SBMenu: "Redes",
-      SBRout: "/redes",
-    },
-    {
-      SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
-      SBMenu: "Grupos",
-      SBRout: "/teamgroups",
+      SBSMContent: [
+        {
+          SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
+          SBMenu: "Redes",
+          SBRout: "/redes",
+        },
+        {
+          SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
+          SBMenu: "Grupos",
+          SBRout: "/teamgroupsn",
+        },
+      ],
     },
     {
       SBIcon: <HiTicket style={{ fontSize: iconSize }} />,
@@ -103,13 +107,31 @@ const SideBarComponent = ({ children }) => {
             setShowSideBar(false), setSidebarCollapsed(true)
           )}
         >
-          <h1>Menú</h1>
+          <h1 className="text-white text-center">Menú</h1>
           {SideBarMenu.map((item, index) => (
             <>
               <div key={index} className="sidebar-content-container">
                 <Link href={item.SBRout} className="sidebar-link-content">
-                  <div className="sidebar-content-icon"> {item.SBIcon}</div>
-                  <div className="sidebar-content-text">{item.SBMenu}</div>
+                  {/* debe estar en 2 columnas */}
+                  <div className="sidebar-link-main-content">
+                    <div className="sidebar-content-icon"> {item.SBIcon}</div>
+                    <div className="sidebar-content-text">{item.SBMenu}</div>
+                  </div>
+                  <div className="sidebar-link-submenu-content">
+                    {item.SBSMContent && (
+                      <div
+                        className="sidebar-submenu"
+                        style={{ marginLeft: "20px" }}
+                      >
+                        {item.SBSMContent.map((nestedItem, nestedIndex) => (
+                          <div key={nestedIndex}>
+                            <span>{nestedItem.SBIcon}</span>
+                            <span>{nestedItem.SBMenu}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </Link>
               </div>
             </>
