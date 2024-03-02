@@ -8,18 +8,52 @@
 .content-container {
   margin-left: 70px;
   position: absolute;
-  
 }
 
-.side-bar{
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 30%;
   height: 100vh;
   z-index: 2;
+  background-color: #1f2937;
+}
+
+.sidebar-content-container {
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 3px; */
+}
+
+.sidebar-link-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.collapsed-sidebar .sidebar-content-text {
+  visibility: hidden;
+  transition: visibility 0.1s ease; /* Optional: Add a smooth transition effect */
+}
+
+.expanded-sidebar:hover .sidebar-content-text {
+  visibility: visible;
+  transition: visibility 0.5s ease; /* Optional: Add a smooth transition effect */
+}
+
+.sidebar-content-icon {
+  padding-left: 20px;
+  margin-right: 10px;
+  align-self: center;
+  color: #f7f7f7;
 }
 
 .collapsed-sidebar {
   width: 70px;
   overflow: hidden;
   transition: width 0.3s ease; /* Add smooth transition */
+  /* background-color: rgb(32, 33, 40); */
 }
 
 .expanded-sidebar {
@@ -29,25 +63,29 @@
   z-index: 2;
 }
 
-.hover-underline-animation {
-  display: inline-block;
+.sidebar-content-container {
   position: relative;
-  color: #f7f7f7;
 }
 
-.hover-underline-animation::after {
-  content: '';
+.sidebar-content-text {
+  text-decoration: none;
+  transition: transform 0.25s ease-out, color 0.25s ease-out;
+  color: white;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.sidebar-content-text::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
   left: 0;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  margin-left: 10%;
+  bottom: -5px;
+  width: 0; /* Initial width is 0 */
+  height: 2px; /* Adjust the thickness of the line as needed */
+  background-color:#0d9488; /* or any other color you want */
+  transition: width 0.25s ease-out; /* Transition the width property */
 }
 
-.hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.sidebar-content-text:hover::before {
+  width: 80%; /* Appear from left to right on hover */
 }
