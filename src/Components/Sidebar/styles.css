@@ -6,6 +6,10 @@
 }
 
 .content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-left: 70px;
   position: absolute;
 }
@@ -96,10 +100,16 @@
   width: 80%; /* Appear from left to right on hover */
 }
 
-.sidebar-link-content:hover .sidebar-submenu {
+.sidebar-link-content:hover .sidebar-submenu-container {
   display: list-item;
 }
 
-.sidebar-submenu {
+.sidebar-submenu-container {
   display: none;
+}
+
+.sidebar-link-submenu-content{
+  display: flex;
+  flex-direction: column;
+
 }

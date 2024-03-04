@@ -62,6 +62,16 @@ const SideBarComponent = ({ children }) => {
       ],
     },
     {
+      SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
+      SBMenu: "Redes",
+      SBRout: "/redes",
+    },
+    {
+      SBIcon: <HiUserGroup style={{ fontSize: iconSize }} />,
+      SBMenu: "Grupos",
+      SBRout: "/teamgroupsn",
+    },
+    {
       SBIcon: <HiTicket style={{ fontSize: iconSize }} />,
       SBMenu: "Eventos",
       SBRout: "/events",
@@ -73,7 +83,7 @@ const SideBarComponent = ({ children }) => {
     },
     {
       SBIcon: <HiAdjustments style={{ fontSize: iconSize }} />,
-      SBMenu: "Ajustes",
+      SBMenu: "Mantenedor",
       SBRout: "/usersettings",
     },
     {
@@ -117,21 +127,29 @@ const SideBarComponent = ({ children }) => {
                     <div className="sidebar-content-icon"> {item.SBIcon}</div>
                     <div className="sidebar-content-text">{item.SBMenu}</div>
                   </div>
-                  <div className="sidebar-link-submenu-content">
+                  {/* <div className="sidebar-link-submenu-content">
                     {item.SBSMContent && (
                       <div
-                        className="sidebar-submenu"
+                        className="sidebar-submenu-container"
                         style={{ marginLeft: "20px" }}
                       >
                         {item.SBSMContent.map((nestedItem, nestedIndex) => (
-                          <div key={nestedIndex}>
-                            <span>{nestedItem.SBIcon}</span>
-                            <span>{nestedItem.SBMenu}</span>
+                          <div
+                            key={nestedIndex}
+                            className="sidebar-link-submenu-content"
+                          >
+                            <Link
+                              href={item.SBRout}
+                              className="sidebar-link-content"
+                            >
+                              <span>{nestedItem.SBIcon}</span>
+                              <span>{nestedItem.SBMenu}</span>
+                            </Link>
                           </div>
                         ))}
                       </div>
                     )}
-                  </div>
+                  </div> */}
                 </Link>
               </div>
             </>

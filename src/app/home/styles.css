@@ -1,0 +1,50 @@
+* {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: min(95vw, 1080px);
+  height: 100%;
+}
+
+.container .header-container-finder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  gap: 5px;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.container-finder {
+  padding: 5px;
+}
+
+/* Aquí van las configuraciones de las tablas */
+
+.table-header{
+    height: 50px;
+    background: #0f172a;
+    border-radius: 25px;
+}
+
+.tbody-profile-row{
+    cursor: pointer;
+    height: 50px;
+}
+
+.tbody-profile-row:hover{
+    background: #0f766e;
+
+}
+
+.tbody-profile-image{
+    display: flex;
+    width: 45px;
+    border-radius: 25px;
+    align-content: center;
+}
