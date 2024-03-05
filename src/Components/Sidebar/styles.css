@@ -7,18 +7,25 @@
 
 .content-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin-left: 70px;
+  /* align-items: center; */
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
   position: absolute;
+  width: 90vw;
+  height: 90vh;
+  border-color: #0d9488;
+  border: solid 1px;
 }
 
 .side-bar {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-bottom: 30%;
+  padding-top: 5%;
+  padding-bottom: 20%;
   height: 100vh;
   z-index: 2;
   background-color: #1f2937;

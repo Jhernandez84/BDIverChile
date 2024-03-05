@@ -26,25 +26,42 @@
 
 /* Aquí van las configuraciones de las tablas */
 
-.table-header{
-    height: 50px;
-    background: #0f172a;
-    border-radius: 25px;
+.table-header {
+  height: 50px;
+  background: #1f2937;
+  border-radius: 25px;
 }
 
-.tbody-profile-row{
-    cursor: pointer;
-    height: 50px;
+.tbody-profile-row {
+  cursor: pointer;
+  height: 50px;
 }
 
-.tbody-profile-row:hover{
-    background: #0f766e;
-
+.tbody-profile-row:hover {
+  background: #0f766e;
 }
 
-.tbody-profile-image{
-    display: flex;
-    width: 45px;
-    border-radius: 25px;
-    align-content: center;
+.th-text {
+  width: 250px;
+}
+
+.th-img {
+  width: 75px;
+}
+
+.tbody-profile-image {
+  display: flex;
+  width: 45px;
+  border-radius: 25px;
+  margin-left: 15px;
+}
+
+/* Acá van las configuraciones del Modal */
+
+.btn-modal {
+  border: solid 1px;
+  border-color: #0f766e;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background: #24857d;
 }
