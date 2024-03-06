@@ -10,11 +10,12 @@ const Home = () => {
   const BDdata = [
     {
       rut: "15957386",
-      nombre: "test",
+      nombre: "Jonathan Antonio",
       foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-      apellidos: "test",
-      telefono: "test",
-      edad: "test",
+      apellido_paterno: "Hernandez",
+      apellido_materno: "Miranda",
+      telefono: "978778829",
+      fec_nac: "1984-09-13",
     },
     {
       rut: "17388935",
@@ -125,9 +126,9 @@ const Home = () => {
                 </td>
                 <td>{item.rut}</td>
                 <td>{item.nombre}</td>
-                <td>{item.apellidos}</td>
+                <td>{item.apellido_paterno} {item.apellido_materno} </td>
                 <td>{item.telefono}</td>
-                <td>{item.edad}</td>
+                <td>{item.fec_nac}</td>
               </tr>
             ))}
           </tbody>
