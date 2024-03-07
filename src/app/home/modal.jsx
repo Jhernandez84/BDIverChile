@@ -22,7 +22,7 @@ const MyModalComponent = ({ onClose, item }) => {
         <div className="dark:bg-gray-600 relative w-[50%] h-[70%] mx-auto my-6 p-6 bg-white border rounded-md shadow-lg">
           <div className="flex items-start justify-between">
             <p className="text-white">
-              Editando Perfil rut: {rut} {nombre} {apellido_paterno}{" "}
+              Editando Perfil rut: {rut} - {nombre} {apellido_paterno}{" "}
               {apellido_materno}
             </p>
             <button

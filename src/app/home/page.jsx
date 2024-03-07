@@ -6,7 +6,6 @@ import TableData from "./tableData";
 import "./styles.css";
 
 const Home = () => {
-
   const BDdata = [
     {
       rut: "15957386",
@@ -77,9 +76,9 @@ const Home = () => {
   return (
     <>
       <div className="container">
-      {isModalOpen && <MyModalComponent onClose={closeModal} item={selectedItem} />
-      
-      }
+        {isModalOpen && (
+          <MyModalComponent onClose={closeModal} item={selectedItem} />
+        )}
         <div className="header-container-finder">
           <div>
             <div className="container-finder">Rut</div>
@@ -102,37 +101,47 @@ const Home = () => {
             <input type="text" />
           </div>
         </div>
-        <div className="container-table">Resultado de la búsqueda</div>
-        <table>
-          <thead className="table-header">
-            <tr>
-              <th className="th-img">Foto</th>
-              <th className="th-text">Rut</th>
-              <th className="th-text">Nombre</th>
-              <th className="th-text">Apellidos</th>
-              <th className="th-text">Teléfono</th>
-              <th className="th-text">Edad</th>
-            </tr>
-          </thead>
-          <tbody>
-            {BDdata.map((item, index) => (
-              <tr
-                key={index}
-                className="tbody-profile-row"
-                onClick={() => {openModal(item)}}
-              >
-                <td>
-                  <img className="tbody-profile-image" src={item.foto} alt="" />
-                </td>
-                <td>{item.rut}</td>
-                <td>{item.nombre}</td>
-                <td>{item.apellido_paterno} {item.apellido_materno} </td>
-                <td>{item.telefono}</td>
-                <td>{item.fec_nac}</td>
+        <div className="container-table">
+          Resultado de la búsqueda
+          <table>
+            <thead className="table-header">
+              <tr>
+                <th className="th-img">Foto</th>
+                <th className="th-text">Rut</th>
+                <th className="th-text">Nombre</th>
+                <th className="th-text">Apellidos</th>
+                <th className="th-text">Teléfono</th>
+                <th className="th-text">Edad</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {BDdata.map((item, index) => (
+                <tr
+                  key={index}
+                  className="tbody-profile-row"
+                  onClick={() => {
+                    openModal(item);
+                  }}
+                >
+                  <td>
+                    <img
+                      className="tbody-profile-image"
+                      src={item.foto}
+                      alt=""
+                    />
+                  </td>
+                  <td>{item.rut}</td>
+                  <td>{item.nombre}</td>
+                  <td>
+                    {item.apellido_paterno} {item.apellido_materno}{" "}
+                  </td>
+                  <td>{item.telefono}</td>
+                  <td>{item.fec_nac}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );
