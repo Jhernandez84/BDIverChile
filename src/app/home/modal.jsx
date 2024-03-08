@@ -19,7 +19,7 @@ const MyModalComponent = ({ onClose, item }) => {
   return (
     <>
       <div className="fixed inset-10 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-        <div className="dark:bg-gray-600 relative w-[50%] h-[70%] mx-auto my-6 p-6 bg-white border rounded-md shadow-lg">
+        <div className="dark:bg-gray-600 relative w-[60%] h-[70%] mx-auto my-6 p-6 bg-white border rounded-md shadow-lg">
           <div className="flex items-start justify-between">
             <p className="text-white">
               Editando Perfil rut: {rut} - {nombre} {apellido_paterno}{" "}
@@ -67,7 +67,7 @@ const MyModalComponent = ({ onClose, item }) => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="">Apellido Paterno</label>
+                      <label htmlFor="" className="input-label">Apellido Paterno</label>
                       <input
                         type="text"
                         id="name"
@@ -76,7 +76,7 @@ const MyModalComponent = ({ onClose, item }) => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="">apellido Materno</label>
+                      <label htmlFor=""  className="input-label">apellido Materno</label>
                       <input
                         type="text"
                         id="name"
@@ -85,7 +85,7 @@ const MyModalComponent = ({ onClose, item }) => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="">Fecha Nacimiento</label>
+                      <label htmlFor="" className="input-label">Fecha Nacimiento</label>
                       <input
                         type="date"
                         id="name"

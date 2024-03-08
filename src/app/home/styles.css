@@ -25,13 +25,12 @@
   border: solid 1px;
 }
 
-.container .header-container-finder input{
+.container .header-container-finder input {
   height: 30px;
   color: #1f2937;
-
 }
 
-.container .container-table{
+.container .container-table {
   width: 80%;
 }
 
@@ -41,15 +40,14 @@
 
 /* Aquí van las configuraciones de las tablas */
 
-.table-header tr{
+.table-header tr {
   height: 50px;
   background: #1f2937;
   border-radius: 25px;
 }
 
-thead tr{
+thead tr {
   border-radius: 25px;
-
 }
 
 .tbody-profile-row {
@@ -87,7 +85,7 @@ thead tr{
   /* display: flex;
   flex-direction: row; */
   border-bottom: #0f766e;
-  border: solid 1.4px;
+  /* border: solid 1.4px; */
   padding: 10px;
 }
 
@@ -96,14 +94,34 @@ thead tr{
   flex-direction: row;
   justify-content: center;
   font-size: large;
-  text-decoration: underline;
+  background: #111827;
+  border-radius: 25px 25px 0 0;
+  height: 30px;
+  /* text-decoration: underline; */
 }
 
 .modal-personal-data-section-container {
-  margin-top: 25px;
+  padding: 10px;
   display: grid;
   /* flex-direction: column; */
   grid-template-columns: 60% auto;
+}
+
+.input-label {
+  display: inline-block;
+  width: 150px;
+}
+
+.input-name {
+  /* background-color: #94a3b8; */
+  color: black;
+  height: 40px;
+  width: 200px;
+  gap: 25px;
+}
+
+label {
+  width: 25px;
 }
 
 .modal-personal-data-section-right-col {
@@ -113,12 +131,12 @@ thead tr{
 
 .modal-personal-data-section-left-col {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .input-personal-data-img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
 }
 
 .input-personal-data-img img {
@@ -135,4 +153,94 @@ thead tr{
   border-radius: 25px;
   padding: 5px 10px;
   background: #24857d;
+  width: 150px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #475569;
+  padding: 20px;
+  border-radius: 25px;
+  position: relative;
+  width: 50%;
+  height: 50%;
+}
+
+.modal-header-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal-footer-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  /* padding-right: 50px; */
+}
+
+.close {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 30px;
+
+  background: #24857d;
+}
+
+/* Accordion Styles */
+
+.accordion {
+  /* width: 300px; */
+}
+
+.accordion-item {
+  /* border: 1px solid #ccc; */
+  background: #475569;
+  /* border-radius: 25px; */
+  margin-bottom: 5px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-item.active {
+  /* max-height: 200px; Adjust the max-height as needed */
+  border-radius: 25px 25px 0 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  background: #111827;
+  border-radius: 25px;
+}
+
+.accordion-header.active {
+  background: #111827;
+  border-radius: 25px 25px 0 0;
+  margin-bottom: 10px;
+}
+
+.accordion-content {
+  padding: 10px;
 }
