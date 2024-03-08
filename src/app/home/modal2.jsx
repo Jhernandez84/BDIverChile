@@ -29,6 +29,11 @@ const ModalUserData = ({ closeModal, item }) => {
   };
 
   const options = ["Soltero", "Casado", "Separado", "Viudo"];
+  const options2 = ["Pastor", "Anciano", "Diacono", "Líder", "Otro"];
+  const options3 = ["SI", "NO"];
+  const options4 = ["No Aplica","Jóvenes", "Señoritas", "Gral Jóvenes", "Mujeres", "Varones", "Niños"];
+  const options5 = ["No","Director","Presidente", "Tesorero", "SubTesorero", "Secretario", "SubSecretario"];
+  const options6 = ["Templo Central","Iver Talcahuano","Iver San Clemente", "Iver Nancahua"];
 
   const AccordionComponent0 = () => (
     // <section className="modal-main-data-container">
@@ -58,7 +63,7 @@ const ModalUserData = ({ closeModal, item }) => {
             />
           </div>
           <div>
-            <label htmlFor="" className="input-label">
+            <label htmlFor="name" className="input-label">
               apellido Materno
             </label>
             <input
@@ -124,7 +129,7 @@ const ModalUserData = ({ closeModal, item }) => {
           onChange={handleSelectChange}
           className="input-name"
         >
-          <option value="Seleccione" disabled>
+          <option value="Seleccione" selected disabled>
             Estado Civil
           </option>
           {options.map((option, index) => (
@@ -136,6 +141,12 @@ const ModalUserData = ({ closeModal, item }) => {
       </div>
       <div>
         <label htmlFor="" className="input-label">
+          Fecha de Aniversario
+        </label>
+        <input type="date" id="name" className="input-name" value="2016-10-22"/>
+      </div>
+      <div>
+        <label htmlFor="" className="input-label">
           Cónyuge
         </label>
         <input type="text" id="name" className="input-name" />
@@ -144,7 +155,7 @@ const ModalUserData = ({ closeModal, item }) => {
         <label htmlFor="" className="input-label">
           Hijos
         </label>
-        <input type="text" id="name" className="input-name" />
+        <input type="number" id="name" className="input-name" />
       </div>
     </section>
   );
@@ -153,17 +164,114 @@ const ModalUserData = ({ closeModal, item }) => {
     <section className="modal-personal-data-section">
       <div>
         <label htmlFor="" className="input-label">
-          Teléfono Contacto
+          Fec. de Integración
         </label>
-        <input type="text" id="name" className="input-name" />
+        <input type="date" id="name" className="input-name" value="2024-01-01"/>
+      </div> 
+      <div>
+        <label htmlFor="options" className="input-label">
+          Participa en Directorio
+        </label>
+        <select
+          id="options"
+          value={selectedOption}
+          // onChange={handleSelectChange}
+          className="input-name"
+        >
+          <option value="Seleccione" selected disabled>
+            Seleccione
+          </option>
+          {options5.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div> 
+        <label htmlFor="options" className="input-label">
+          Nivel de Liderazgo
+        </label>
+        <select
+          id="options"
+          value={selectedOption}
+          onChange={handleSelectChange}
+          className="input-name"
+        >
+          <option value="Seleccione" disabled>
+            Seleccione
+          </option>
+          {options2.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       </div>
       <div>
-        <label htmlFor="" className="input-label">
-          Dirección
+        <label htmlFor="options" className="input-label">
+          Grupo que lidera
         </label>
-        <input type="text" id="name" className="input-name" />
+        <select
+          id="options"
+          value={selectedOption}
+          onChange={handleSelectChange}
+          className="input-name"
+        >
+          <option value="Seleccione" selected disabled>
+            Seleccione
+          </option>
+          {options4.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       </div>
+      <div>
+        <label htmlFor="options" className="input-label">
+          Participa en Redes
+        </label>
+        <select
+          id="options"
+          value={selectedOption}
+          onChange={handleSelectChange}
+          className="input-name"
+        >
+          <option value="Seleccione" selected disabled>
+            Seleccione
+          </option>
+          {options3.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="options" className="input-label">
+          Lugar de origen
+        </label>
+        <select
+          id="options"
+          value={selectedOption}
+          onChange={handleSelectChange}
+          className="input-name"
+        >
+          <option value="Seleccione" selected disabled>
+            Seleccione
+          </option>
+          {options6.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+
     </section>
+    
   );
 
   const accordionItems = [
